@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="24dp"
+    app:strokeColor="@color/black"
+    app:strokeWidth="4dp"
+    app:cardElevation="12dp"
+    android:layout_margin="16dp"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:background="@drawable/gradient"
+        >
+
+
+        <ImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="1dp"
+            android:src="@android:drawable/ic_menu_camera"
+
+
+            android:contentDescription="Profile Icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/name" />
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            tools:text="Khaled Akram"
+            app:layout_constraintStart_toEndOf="@id/profile_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/gender" />
+
+        <!-- Gender -->
+        <TextView
+            android:layout_marginTop="12dp"
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            tools:text="Male"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name" />
+
+        <!-- City -->
+        <TextView
+            android:layout_marginTop="12dp"
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            tools:text="Cairo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gender" />
+
+        <!-- Email Icon and Text -->
+        <ImageView
+
+            android:id="@+id/mail_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="8dp"
+            android:src="@android:drawable/ic_menu_send"
+        android:contentDescription="Email Icon"
+        app:layout_constraintStart_toStartOf="@id/profile_icon"
+        app:layout_constraintTop_toBottomOf="@id/profile_icon" />
+
+        <TextView
+            android:id="@+id/mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            tools:text="khaled@gmail.com"
+            app:layout_constraintStart_toEndOf="@id/mail_icon"
+            app:layout_constraintTop_toTopOf="@id/mail_icon" />
+
+        <!-- Phone Icon and Text -->
+        <ImageView
+            android:id="@+id/phone_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@android:drawable/ic_menu_call"
+        android:contentDescription="Phone Icon"
+        app:layout_constraintStart_toStartOf="@id/mail_icon"
+        app:layout_constraintTop_toBottomOf="@id/mail" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            tools:text="111-111-1111"
+            app:layout_constraintStart_toEndOf="@id/phone_icon"
+            app:layout_constraintTop_toTopOf="@id/phone_icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
